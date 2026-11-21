@@ -1,0 +1,190 @@
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Grotesk:wght@400;500;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: "Space Grotesk", Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 780px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: "Special Elite", "Courier New", monospace;
+}
+
+header {
+    background-color: #690000;
+    background-size: 16px 16px;
+    border-radius: 1.25rem;
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    box-shadow: 0 0.5rem 1.25rem rgb(255, 0, 0);
+    border: 1px solid #690000;
+}
+
+h1 {
+    color: #ffffff;
+    margin: 0 0 0.6rem 0;
+    font-size: 2.2rem;
+    letter-spacing: -0.03rem;
+}
+
+/* Containers */
+section, footer {
+    background-color: #000000;
+    border-radius: 1.1rem;
+    padding: 1.75rem;
+    margin-bottom: 1.4rem;
+    box-shadow: 0 0.25rem 0.9rem rgba(0, 0, 0, 0.03);
+    border: 1px solid #eae2f2;
+}
+
+h2 {
+    color: #ff6167;
+    margin-top: 0;
+    font-size: 1.35rem;
+    border-bottom: 0.12rem solid #f3ecfb;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Flexbox: Bio Container */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.25rem solid #e8dcf5;
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+/* Things I Love List */
+ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+ul li {
+    background-color: #690000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid #ffffff;
+}
+
+/* Passion Project Cards */
+article {
+    background-color: #690000;
+    background-size: 14px 14px;
+    border-radius: 0.9rem;
+    padding: 1.25rem;
+    border-left: 0.3rem solid #ff6167;
+    border-top: 1px solid #ff6167;
+    border-right: 1px solid #ff6167;
+    border-bottom: 1px solid #ff6167;
+    margin-bottom: 1.5rem;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.project-header h3 {
+    color: #ff6167;
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+/* Dynamic Wrapping Flexbox Gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+}
+
+.project-gallery img {
+    flex: 1 1 calc(33.333% - 0.6rem);
+    min-width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    border: 1px solid #ff0000;
+}
+
+/* Footer & Links */
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #ff6167;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive View (Mobile) */
+@media (max-width: 600px) {
+    .bio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+
+    .project-gallery img {
+        flex: 1 1 calc(50% - 0.6rem);
+        height: 120px;
+    }
+
+    body {
+        margin: 1rem auto;
+        padding: 0 0.65rem;
+    }
+}
